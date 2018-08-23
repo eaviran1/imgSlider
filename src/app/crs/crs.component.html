@@ -1,0 +1,20 @@
+<div *ngIf = "tupleItems.length>0"
+      style="position:absoulute;width:600px;max-width:600px;height:400px;max-height:400px;margin:auto">
+  <div>
+    <img src="{{tupleItems[pos].media.m}}"  style="margin:0 auto;width:600px;height:400px">
+  </div>
+<div >
+  <i *ngIf="pos>0" id="btnCarouselPrev" class="fa fa-chevron-left pull-left" (click)="goPrev()" title="Previous"></i>
+  <i *ngIf="pos < tupleItems.length-1" id="btnCarouselNext" class="fa fa-chevron-right pull-right" (click)="goNext()" title="Forward"></i>
+  <div style="border-color:black;border-width:2px;background-color:lightgray;height:20px;">
+      <div class="col-xs-5">
+      </div>
+      <div class="col-xs-2">
+          <span style="font-weight:bolder;font-size:14px;"> {{pos+1}}</span>/
+          <span style="font-size:14px;margin-left:-5px;">{{tupleItems.length}}</span>
+      </div>
+      <div class="col-xs-5">
+      </div>
+  </div>
+</div>
+</div>
